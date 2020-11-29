@@ -31,9 +31,9 @@ jobs:
         ls -l _work/help-jp | wc -l
         rm -r _work/kondoumh
         rm -r _work/help-jp
-        mkdir public/data
-        mv _work/help-jp_graph.json public
         mv _work/kondoumh_graph.json public
+        mv _work/help-jp_graph.json public
+        ls -l public
 
     - name: Deploy to netlify
       uses: nwtgck/actions-netlify@v1.1

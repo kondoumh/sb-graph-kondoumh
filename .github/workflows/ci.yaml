@@ -13,7 +13,7 @@ jobs:
 
     - name: Run sbgraph
       run : |
-        curl -LO https://github.com/mamezou-tech/sbgraph/releases/download/v0.4.0/sbgraph-linux-amd64.tar.gz
+        curl -LO https://github.com/mamezou-tech/sbgraph/releases/download/v0.7.0/sbgraph-linux-amd64.tar.gz
         tar xvf sbgraph-linux-amd64.tar.gz
         mkdir ~/bin
         export PATH=$PATH:~/bin
@@ -21,16 +21,12 @@ jobs:
         sbgraph init
         sbgraph project -p kondoumh
         sbgraph fetch
-        sbgraph aggregate
         sbgraph graph -i=true -a=true -j=true
         sbgraph project -p help-jp
         sbgraph fetch
-        sbgraph aggregate
         sbgraph graph -i=true -a=true -j=true
         ls -l _work/kondoumh | wc -l
         ls -l _work/help-jp | wc -l
-        rm -r _work/kondoumh
-        rm -r _work/help-jp
         mv _work/kondoumh_graph.json public
         mv _work/help-jp_graph.json public
         ls -l public

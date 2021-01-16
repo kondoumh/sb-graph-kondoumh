@@ -15,7 +15,6 @@ define INSTALL_SBGRAPH
 	curl -LO https://github.com/mamezou-tech/sbgraph/releases/download/$(VERSION)/sbgraph-linux-amd64.tar.gz
 	tar xvf sbgraph-linux-amd64.tar.gz
 	mkdir -p ~/bin
-	export PATH=$PATH:~/bin
 	mv sbgraph ~/bin
 endef
 

@@ -13,10 +13,14 @@ jobs:
 
     - name: Run sbgraph
       run : |
-        make install VERSION=v0.7.0
         export PATH=$PATH:~/bin
+        make install VERSION=v0.7.0
         make build PROJECT=kondoumh
         make build PROJECT=help-jp
+        make build comic-forum
+        make build icons
+        make build daiiz
+        make build june29
         ls -l public
 
     - name: Deploy to netlify

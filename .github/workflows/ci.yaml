@@ -20,6 +20,7 @@ jobs:
         mv sbgraph ~/bin
         make build PROJECT=kondoumh
         make build PROJECT=help-jp
+        mv _work/*.json public
         ls -l public
 
     - name: Deploy to netlify

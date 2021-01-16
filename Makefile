@@ -8,6 +8,7 @@ define BUILD_GRAPH
 	$(COMMAND) fetch
 	$(COMMAND) graph -i=true -a=true -j=true
 	ls -l _work/$(PROJECT) | wc -l
+	mv _work/$(PROJECT)_graph.json public/$(PROJECT)_graph.json
 endef
 
 define INSTALL_SBGRAPH
@@ -20,8 +21,8 @@ endef
 
 .PHONY: install
 install:
-	$(call INSTALL_SBGRAPH) $(VERSION)
+	$(call INSTALL_SBGRAPH)
 
 .PHONY: build
 build:
-	$(call BUILD_GRAPH) $(PROJECT)
+	$(call BUILD_GRAPH)

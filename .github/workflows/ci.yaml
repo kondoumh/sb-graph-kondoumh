@@ -17,10 +17,10 @@ jobs:
         make install VERSION=v0.7.0
         make build PROJECT=kondoumh
         make build PROJECT=help-jp
-        make build comic-forum
-        make build icons
-        make build daiiz
-        make build june29
+        make build PROJECT=comic-forum
+        make build PROJECT=icons
+        make build PROJECT=daiiz
+        make build PROJECT=june29
         ls -l public
 
     - name: Deploy to netlify

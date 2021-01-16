@@ -8,7 +8,7 @@ define BUILD_GRAPH
 	$(COMMAND) fetch
 	$(COMMAND) graph -i=true -a=true -j=true
 	ls -l _work/$(PROJECT) | wc -l
-	mv _work/$(PROJECT)_graph.json public
+	mv _work/$(PROJECT)_graph.json public/$(PROJECT)_graph.json
 endef
 
 define INSTALL_SBGRAPH

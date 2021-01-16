@@ -13,11 +13,7 @@ jobs:
 
     - name: Run sbgraph
       run : |
-        curl -LO https://github.com/mamezou-tech/sbgraph/releases/download/v0.7.0/sbgraph-linux-amd64.tar.gz
-        tar xvf sbgraph-linux-amd64.tar.gz
-        mkdir ~/bin
-        export PATH=$PATH:~/bin
-        mv sbgraph ~/bin
+        make install VERSION=v0.7.0
         make build PROJECT=kondoumh
         make build PROJECT=help-jp
         ls -l public

@@ -18,17 +18,8 @@ jobs:
         mkdir ~/bin
         export PATH=$PATH:~/bin
         mv sbgraph ~/bin
-        sbgraph init
-        sbgraph project -p kondoumh
-        sbgraph fetch
-        sbgraph graph -i=true -a=true -j=true
-        sbgraph project -p help-jp
-        sbgraph fetch
-        sbgraph graph -i=true -a=true -j=true
-        ls -l _work/kondoumh | wc -l
-        ls -l _work/help-jp | wc -l
-        mv _work/kondoumh_graph.json public
-        mv _work/help-jp_graph.json public
+        make build PROJECT=kondoumh
+        make build PROJECT=help-jp
         ls -l public
 
     - name: Deploy to netlify
